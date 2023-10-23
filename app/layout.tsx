@@ -1,10 +1,10 @@
+import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import "./theme-config.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/app/NavBar";
-import { Theme } from "@radix-ui/themes";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={montserrat.variable}>
         <Theme appearance="light" accentColor="violet">
           <NavBar />
           <main className="p-5">{children}</main>
